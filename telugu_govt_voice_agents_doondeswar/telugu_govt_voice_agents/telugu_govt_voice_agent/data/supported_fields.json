@@ -1,0 +1,18 @@
+{
+  "fields": [
+    "state",
+    "age",
+    "gender",
+    "occupation",
+    "annual_income",
+    "community",
+    "disability",
+    "widow",
+    "pregnant_woman",
+    "student",
+    "land_owner",
+    "owns_house",
+    "unemployed",
+    "has_children"
+  ]
+}

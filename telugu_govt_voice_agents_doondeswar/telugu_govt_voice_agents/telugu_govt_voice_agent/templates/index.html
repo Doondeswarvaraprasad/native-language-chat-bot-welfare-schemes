@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <title>తెలుగు ప్రభుత్వ వాయిస్ సహాయకుడు</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- LEFT CHAT AREA -->
+    <div class="chat-section">
+        <div class="header">
+            🎙️ తెలుగు ప్రభుత్వ వాయిస్ సహాయకుడు
+            <div class="voice-controls">
+                <button id="speaker-button" title="వాయిస్ టెస్ట్">🔊</button>
+                <button id="stop-button" title="అన్ని వాయిస్ కార్యకలాపాలు ఆపు">⏹️</button>
+                <button id="voice-toggle" title="వాయిస్ ఆన్/ఆఫ్">🔊</button>
+            </div>
+        </div>
+
+        <div id="voice-status" class="voice-status"></div>
+
+        <div class="chat-box">
+        </div>
+
+        <div class="input-area">
+            <button id="mic-button" class="mic-input-btn" title="వినడం ప్రారంభించు">🎤</button>
+            <input type="text" placeholder="మీ ప్రశ్న టైప్ చేయండి లేదా మైక్రోఫోన్ ఉపయోగించండి..." />
+            <button class="send-btn">➤</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/voice.js') }}"></script>
+</body>
+</html>

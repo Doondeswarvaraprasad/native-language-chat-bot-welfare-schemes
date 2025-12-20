@@ -1,0 +1,100 @@
+[
+  {
+    "scheme_id": "AP_PENSION_KANUKA",
+    "rules": {
+      "age_min": 55,
+      "state": "AP",
+      "income_below": 200000
+    }
+  },
+  {
+    "scheme_id": "AP_ASARA",
+    "rules": {
+      "age_min": 65,
+      "state": "AP"
+    }
+  },
+  {
+    "scheme_id": "AP_OLD_AGE",
+    "rules": {
+      "age_min": 60,
+      "state": "AP",
+      "income_below": 200000
+    }
+  },
+  {
+    "scheme_id": "TS_OLD_AGE",
+    "rules": {
+      "age_min": 57,
+      "state": "TS"
+    }
+  },
+  {
+    "scheme_id": "TS_AASARA",
+    "rules": {
+      "age_min": 65,
+      "state": "TS"
+    }
+  },
+  {
+    "scheme_id": "TS_PENSION",
+    "rules": {
+      "age_min": 60,
+      "state": "TS",
+      "income_below": 150000
+    }
+  },
+  {
+    "scheme_id": "TS_RYTHU_BANDHU",
+    "rules": {
+      "state": "TS",
+      "occupation": "farmer"
+    }
+  },
+  {
+    "scheme_id": "TS_RYTHU_BHEEMA",
+    "rules": {
+      "state": "TS",
+      "occupation": "farmer",
+      "age_range": [18, 60]
+    }
+  },
+  {
+    "scheme_id": "AP_RYTHU_BHAROSA",
+    "rules": {
+      "state": "AP",
+      "occupation": "farmer"
+    }
+  },
+  {
+    "scheme_id": "AP_AMMA_VODI",
+    "rules": {
+      "state": "AP",
+      "has_children": true
+    }
+  },
+  {
+    "scheme_id": "TS_KALYANA_LAKSHMI",
+    "rules": {
+      "state": "TS",
+      "gender": "female",
+      "age_range": [18, 30],
+      "income_below": 200000
+    }
+  },
+  {
+    "scheme_id": "AP_VIDYA_DEEVENA",
+    "rules": {
+      "state": "AP",
+      "age_range": [16, 25]
+    }
+  },
+  {
+    "scheme_id": "TS_FEE_REIMBURSEMENT",
+    "rules": {
+      "state": "TS",
+      "age_range": [16, 25],
+      "income_below": 500000
+    }
+  }
+]

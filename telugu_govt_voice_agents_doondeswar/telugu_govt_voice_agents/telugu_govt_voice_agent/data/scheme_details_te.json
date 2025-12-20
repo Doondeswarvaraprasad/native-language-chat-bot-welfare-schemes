@@ -1,0 +1,17 @@
+{
+  "AP_AMMA_VODI": {
+    "description_te": "పిల్లలను పాఠశాలకు పంపే తల్లులకు ఆర్థిక సహాయం.",
+    "benefits_te": "₹15,000 ప్రతి సంవత్సరం",
+    "apply_process_te": "గ్రామ సచివాలయం ద్వారా"
+  },
+  "AP_RYTHU_BHAROSA": {
+    "description_te": "రైతులకు పెట్టుబడి సహాయం.",
+    "benefits_te": "₹13,500 ప్రతి సంవత్సరం",
+    "apply_process_te": "గ్రామ సచివాలయం ద్వారా"
+  },
+  "TS_RYTHU_BANDHU": {
+    "description_te": "రైతులకు పెట్టుబడి సహాయం.",
+    "benefits_te": "ఎకరాకు ₹10,000",
+    "apply_process_te": "ఆటోమేటిక్ అమలు"
+  }
+}

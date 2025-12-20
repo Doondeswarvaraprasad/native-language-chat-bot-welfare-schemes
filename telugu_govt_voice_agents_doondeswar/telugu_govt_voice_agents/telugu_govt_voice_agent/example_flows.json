@@ -1,0 +1,265 @@
+{
+  "flows": [
+    {
+      "name": "Complete Information Flow",
+      "description": "User provides all required information at once",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నేను రైతును తెలంగాణ నుండి నా వయసు 35 ఆదాయం 2 లక్షలు",
+          "expected_intent": "scheme_search",
+          "expected_slots": {
+            "occupation": "farmer",
+            "state": "TS",
+            "age": 35,
+            "income": 200000
+          },
+          "expected_schemes": ["TS_RYTHU_BANDHU", "TS_RYTHU_BHEEMA"],
+          "agent_response_type": "scheme_list"
+        }
+      ]
+    },
+    {
+      "name": "Missing Information Flow",
+      "description": "User provides incomplete information, agent asks questions",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నాకు ప్రభుత్వ పథకం కావాలి",
+          "expected_intent": "scheme_search",
+          "expected_slots": {},
+          "missing_slots": ["age", "income", "occupation", "state"],
+          "agent_response_type": "ask_missing_info"
+        },
+        {
+          "turn": 2,
+          "user": "నేను రైతును",
+          "expected_slots": {
+            "occupation": "farmer"
+          },
+          "missing_slots": ["age", "income", "state"],
+          "agent_response_type": "ask_missing_info"
+        },
+        {
+          "turn": 3,
+          "user": "నా వయసు 35",
+          "expected_slots": {
+            "occupation": "farmer",
+            "age": 35
+          },
+          "missing_slots": ["income", "state"],
+          "agent_response_type": "ask_missing_info"
+        },
+        {
+          "turn": 4,
+          "user": "తెలంగాణ నుండి",
+          "expected_slots": {
+            "occupation": "farmer",
+            "age": 35,
+            "state": "TS"
+          },
+          "missing_slots": ["income"],
+          "agent_response_type": "ask_missing_info"
+        },
+        {
+          "turn": 5,
+          "user": "నా ఆదాయం 2 లక్షలు",
+          "expected_slots": {
+            "occupation": "farmer",
+            "age": 35,
+            "state": "TS",
+            "income": 200000
+          },
+          "missing_slots": [],
+          "expected_schemes": ["TS_RYTHU_BANDHU", "TS_RYTHU_BHEEMA"],
+          "agent_response_type": "scheme_list"
+        }
+      ]
+    },
+    {
+      "name": "Contradiction Handling Flow",
+      "description": "User provides conflicting information",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నా వయసు 30 సంవత్సరాలు నేను రైతును తెలంగాణ నుండి",
+          "expected_slots": {
+            "age": 30,
+            "occupation": "farmer",
+            "state": "TS"
+          },
+          "agent_response_type": "ask_missing_info"
+        },
+        {
+          "turn": 2,
+          "user": "నా ఆదాయం 1.5 లక్షలు",
+          "expected_slots": {
+            "age": 30,
+            "occupation": "farmer",
+            "state": "TS",
+            "income": 150000
+          },
+          "agent_response_type": "scheme_list"
+        },
+        {
+          "turn": 3,
+          "user": "నా ఆదాయం 5 లక్షలు",
+          "conflict_detected": true,
+          "conflict_field": "income",
+          "old_value": 150000,
+          "new_value": 500000,
+          "agent_response_type": "conflict_resolution"
+        },
+        {
+          "turn": 4,
+          "user": "అవును 5 లక్షలు సరైనది",
+          "expected_intent": "confirmation",
+          "expected_slots": {
+            "age": 30,
+            "occupation": "farmer",
+            "state": "TS",
+            "income": 500000
+          },
+          "agent_response_type": "confirmation_and_schemes"
+        }
+      ]
+    },
+    {
+      "name": "Age Contradiction Flow",
+      "description": "User changes age information",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నా వయసు 30",
+          "expected_slots": {
+            "age": 30
+          }
+        },
+        {
+          "turn": 2,
+          "user": "నా వయసు 40",
+          "conflict_detected": true,
+          "conflict_field": "age",
+          "old_value": 30,
+          "new_value": 40,
+          "agent_response": "మీరు చెప్పిన వివరాల్లో తేడా ఉంది: వయసు: ముందు 30 అన్నారు, ఇప్పుడు 40 చెప్పారు. ఏది సరైనది?"
+        },
+        {
+          "turn": 3,
+          "user": "40 సరైనది",
+          "expected_slots": {
+            "age": 40
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pension Eligibility Flow",
+      "description": "Elderly person checking pension schemes",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నా వయసు 65 సంవత్సరాలు తెలంగాణ నుండి నా ఆదాయం 50000",
+          "expected_slots": {
+            "age": 65,
+            "state": "TS",
+            "income": 50000
+          },
+          "missing_slots": ["occupation"],
+          "expected_schemes": ["TS_OLD_AGE", "TS_AASARA"],
+          "agent_response_type": "scheme_list_or_ask_occupation"
+        }
+      ]
+    },
+    {
+      "name": "Women Scheme Flow",
+      "description": "Woman checking eligibility for women-specific schemes",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నేను మహిళను నా వయసు 22 ఆంధ్రప్రదేశ్ నుండి నా ఆదాయం 1 లక్ష",
+          "expected_slots": {
+            "gender": "female",
+            "age": 22,
+            "state": "AP",
+            "income": 100000
+          },
+          "missing_slots": ["occupation"],
+          "expected_schemes": ["AP_CHEYYUTHA"],
+          "agent_response_type": "scheme_list_or_ask_occupation"
+        }
+      ]
+    },
+    {
+      "name": "Student Scholarship Flow",
+      "description": "Student checking for scholarship schemes",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నేను విద్యార్థిని నా వయసు 20 తెలంగాణ నుండి",
+          "expected_slots": {
+            "age": 20,
+            "state": "TS"
+          },
+          "missing_slots": ["income", "occupation"],
+          "expected_schemes": ["TS_STUDENT_SCHOLARSHIP"],
+          "agent_response_type": "ask_missing_info"
+        }
+      ]
+    },
+    {
+      "name": "Driver Scheme Flow",
+      "description": "Driver checking for vehicle-related schemes",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నేను డ్రైవర్ను ఆంధ్రప్రదేశ్ నుండి నా వయసు 35 ఆదాయం 3 లక్షలు",
+          "expected_slots": {
+            "occupation": "driver",
+            "state": "AP",
+            "age": 35,
+            "income": 300000
+          },
+          "expected_schemes": ["AP_VAHANA_MITRA"],
+          "agent_response_type": "scheme_list"
+        }
+      ]
+    },
+    {
+      "name": "No Eligibility Flow",
+      "description": "User doesn't match any scheme criteria",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నా వయసు 25 నేను ఉద్యోగిని నా ఆదాయం 10 లక్షలు తెలంగాణ నుండి",
+          "expected_slots": {
+            "age": 25,
+            "occupation": "employee",
+            "income": 1000000,
+            "state": "TS"
+          },
+          "expected_schemes": [],
+          "agent_response_type": "no_schemes_found"
+        }
+      ]
+    },
+    {
+      "name": "Greeting and Help Flow",
+      "description": "User greets and asks for help",
+      "conversation": [
+        {
+          "turn": 1,
+          "user": "నమస్కారం",
+          "expected_intent": "greeting",
+          "agent_response_type": "greeting_response"
+        },
+        {
+          "turn": 2,
+          "user": "నాకు సహాయం కావాలి",
+          "expected_intent": "scheme_search",
+          "agent_response_type": "ask_missing_info"
+        }
+      ]
+    }
+  ]
+}

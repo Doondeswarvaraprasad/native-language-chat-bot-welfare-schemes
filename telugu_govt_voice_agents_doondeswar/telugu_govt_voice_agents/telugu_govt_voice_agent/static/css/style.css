@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6fb;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT CHAT */
+.chat-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+.header {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voice-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.voice-controls button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.voice-controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.voice-controls button.listening {
+    background: #ff4444;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.voice-status {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    min-height: 20px;
+}
+
+.voice-status.listening {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.voice-status.speaking {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.voice-status.success {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.voice-status.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.voice-status.info {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.bot-msg {
+    background: #eef2ff;
+    padding: 12px;
+    border-radius: 8px;
+    width: fit-content;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.user-msg {
+    background: #e8f5e8;
+    padding: 12px;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.speak-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+    padding: 4px;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.speak-btn:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.confidence {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    gap: 8px;
+    align-items: center;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.mic-input-btn {
+    padding: 10px 12px;
+    border-radius: 50%;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.mic-input-btn:hover {
+    background: #ff5252;
+}
+
+.mic-input-btn.listening {
+    background: #ff4444;
+    animation: pulse 1.5s infinite;
+}
+
+.send-btn {
+    padding: 10px 16px;
+    border-radius: 50%;
+    border: none;
+    background: #6a11cb;
+    color: white;
+    cursor: pointer;
+}
+
+/* RIGHT PROFILE */
+.profile-section {
+    flex: 1;
+    padding: 15px;
+    background: #f8f9ff;
+    overflow-y: auto;
+}
+
+.profile-card,
+.info-card,
+.quick-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.profile-card h3,
+.info-card h3,
+.quick-card h3 {
+    margin-top: 0;
+}
+
+.quick-card button {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: #2575fc;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,42 @@
+{
+  "AP": [
+    { "scheme_id": "AP_AMMA_VODI", "scheme_name_te": "అమ్మ ఒడి" },
+    { "scheme_id": "AP_RYTHU_BHAROSA", "scheme_name_te": "రైతు భరోసా" },
+    { "scheme_id": "AP_PENSION_KANUKA", "scheme_name_te": "పెన్షన్ కానుక" },
+    { "scheme_id": "AP_ASARA", "scheme_name_te": "ఆసరా" },
+    { "scheme_id": "AP_CHEYYUTHA", "scheme_name_te": "చేయూత" },
+    { "scheme_id": "AP_KAPU_NESTHAM", "scheme_name_te": "కాపు నేస్తం" },
+    { "scheme_id": "AP_NETANNA_NESTHAM", "scheme_name_te": "నేతన్న నేస్తం" },
+    { "scheme_id": "AP_MATSYAKARA", "scheme_name_te": "మత్స్యకార భరోసా" },
+    { "scheme_id": "AP_VAHANA_MITRA", "scheme_name_te": "వాహన మిత్ర" },
+    { "scheme_id": "AP_AROGYASRI", "scheme_name_te": "ఆరోగ్యశ్రీ" },
+    { "scheme_id": "AP_HOUSING", "scheme_name_te": "ఇళ్ల పథకం" },
+    { "scheme_id": "AP_FEE_REIMBURSEMENT", "scheme_name_te": "ఫీజు రీయింబర్స్‌మెంట్" },
+    { "scheme_id": "AP_SCHOLARSHIP", "scheme_name_te": "విద్యా దీవెన" },
+    { "scheme_id": "AP_MATERNITY", "scheme_name_te": "మాతృత్వ కానుక" },
+    { "scheme_id": "AP_SKILL", "scheme_name_te": "నైపుణ్యాభివృద్ధి" },
+    { "scheme_id": "AP_SELF_EMPLOYMENT", "scheme_name_te": "స్వయం ఉపాధి" },
+    { "scheme_id": "AP_SOCIAL_SECURITY", "scheme_name_te": "సామాజిక భద్రత" },
+    { "scheme_id": "AP_CANTEENS", "scheme_name_te": "జగనన్న కాంటీన్లు" }
+  ],
+  "TS": [
+    { "scheme_id": "TS_RYTHU_BANDHU", "scheme_name_te": "రైతు బంధు" },
+    { "scheme_id": "TS_RYTHU_BHEEMA", "scheme_name_te": "రైతు బీమా" },
+    { "scheme_id": "TS_AASARA", "scheme_name_te": "ఆసరా పెన్షన్" },
+    { "scheme_id": "TS_KALYANA_LAKSHMI", "scheme_name_te": "కళ్యాణ లక్ష్మి" },
+    { "scheme_id": "TS_SHAADI_MUBARAK", "scheme_name_te": "షాదీ ముబారక్" },
+    { "scheme_id": "TS_KCR_KIT", "scheme_name_te": "కెసిఆర్ కిట్" },
+    { "scheme_id": "TS_DALIT_BANDHU", "scheme_name_te": "దళిత బంధు" },
+    { "scheme_id": "TS_2BHK", "scheme_name_te": "2 బెడ్‌రూమ్ ఇళ్లు" },
+    { "scheme_id": "TS_DISABLED_PENSION", "scheme_name_te": "దివ్యాంగుల పెన్షన్" },
+    { "scheme_id": "TS_OLD_AGE", "scheme_name_te": "వృద్ధాప్య పెన్షన్" },
+    { "scheme_id": "TS_STUDENT_SCHOLARSHIP", "scheme_name_te": "విద్యార్థి స్కాలర్‌షిప్" },
+    { "scheme_id": "TS_UNEMPLOYMENT", "scheme_name_te": "నిరుద్యోగ భృతి" },
+    { "scheme_id": "TS_SKILL", "scheme_name_te": "నైపుణ్య శిక్షణ" },
+    { "scheme_id": "TS_WOMEN_SAFETY", "scheme_name_te": "మహిళా భద్రత" },
+    { "scheme_id": "TS_MINORITY", "scheme_name_te": "మైనారిటీ సంక్షేమం" },
+    { "scheme_id": "TS_HEALTH", "scheme_name_te": "ఆరోగ్య సహాయం" },
+    { "scheme_id": "TS_RURAL_LIVELIHOOD", "scheme_name_te": "గ్రామీణ జీవనోపాధి" },
+    { "scheme_id": "TS_SOCIAL_SECURITY", "scheme_name_te": "సామాజిక భద్రత" }
+  ]
+}
