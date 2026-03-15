@@ -10,7 +10,7 @@ import re
 from tools.scheme_details_tool import get_scheme_details
 
 load_dotenv()
-client = Groq(api_key="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")
+client = Groq(api_key="********")
 
 try:
     with open("data/schemes_master.json", encoding="utf-8") as _f:
